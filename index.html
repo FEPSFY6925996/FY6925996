@@ -81,14 +81,17 @@ p.exl {
 </section>
   
 <h3 id="The Problem">The Problem</h3>  
+<pre id="The Problem_InText">
   <p class="ex1" 
     <pre>
     gghghggggggggggggggggggggggggggggggggggggggggggggg
 </pre>
 </p>
-
+</pre> 
+  
 <section style="background-color:#A42EFF;">
-<h3 id="Soluction - self healing concrete">Soluction - self healing concrete</h3>  
+<h3 id="Soluction - self healing concrete">Soluction - self healing concrete</h3>
+<pre id="Soluction - self healing concrete_InText"> 
   <p class="ex1"
     <pre>
    A solution to the issue would be concrete that self heals the early minor damage. Done correctly, self healing concrete lasts for longer and is beneficial for 3 major reasons:
@@ -96,35 +99,40 @@ Safety: as less damage occurs the risk of structural failure and collapse is gre
 Cost: it increases the life span of concrete e.g. a bridge that would last 20 years might last 40 years, with lower maintenance costs too.
 Environment: concrete is  not a very environmentally friendly material so increasing its lifespan and reducing the amount decommissioned has clear benefits (Amran et al, 2022)
 It is estimated that currently in the uk £40 billion pounds a year are spent on maintenance,  most of this on concrete structures. (Cardiff University, 2015)
-
+</pre>
+</p>
 </pre>
 </section>
 
-<h3 id="History">History</h3>  
+<h3 id="History">History</h3> 
+<pre id="History_InText"> 
   <p class="ex1" 
     <pre>
     gghghggggggggggggggggggggggggggggggggggggggggggggg
 </pre>
 </p>
+</pre>
   
 <section style="background-color:#A42EFF;">
- <h3 id="Current Research">Current Research</h3>  
+ <h3 id="Current Research">Current Research</h3>
+  <pre id="Current Research_InText"> 
   <p class="ex1"
     <pre>
     gghghggggggggggggggggggggggggggggggggggggggggggggg
 </pre>
 </p>
+</pre>
 </section>
 
- <h3 id="Summary">Summary</h3>  
+ <h3 id="Summary">Summary</h3> 
+ <pre id="Summary_InText"> 
   <p class="ex1"
     <pre>
     This shows how while concrete has since being invented by the romans, continues to be  widely accepted as an effective building material, it has a major weakness. As the world's population continues to grow the need for a solution to make concrete longer lasting and safer grows too..
 Due to the scale of the  need and the commercial value of a finding a solution,  there are many projects in progress, some of these due to the nature of the solution and the environment that the structure is in – so bacteria that actually needs water to enter the concrete to make it work, so would be no use in a desert whereas a solution that relies on heat would be more effective, so multiple and quite specific solutions are needed due to the nature of the material and the wide variety of the places that it is used.
-
-
 </pre>
 </p>
+</pre>
 
   <section style="background-color:#A42EFF;">
   <h3 id="References">References</h3>  
@@ -202,7 +210,34 @@ Due to the scale of the  need and the commercial value of a finding a solution, 
     // Initial load to display the time on page load
     window.onload = getLastUpdatedTime;
 </script>
-
+<!-- Placeholder for total word count -->
+<p id="totalWordCount"></p>
+<hr>
+<script>
+  // Function to calculate and display word count for a specified section
+  function displayWordCount(sectionId, outputId) {
+    // Get the text content from the specified section
+    const text = document.getElementById(sectionId).textContent;
+    // Split text into words based on spaces and filter out any empty strings
+    const wordArray = text.trim().split(/\s+/);
+    // Count the words
+    const wordCount = wordArray.length;
+    // Return the word count for summing purposes
+    return wordCount;
+  }
+  // Function to calculate and display total word count from selected sections
+  function displayTotalWordCount() {
+    // Calculate word count for each section and accumulate the total
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const AnalysisCount = displayWordCount("Analysis_InText");
+    // Calculate the sum of all selected sections
+    const totalWordCount = IntroductionCount + AnalysisCount;
+    // Display the total word count
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+  }
+  // Run the function for specific sections and display total count when the page loads
+  window.onload = displayTotalWordCount;
+</script>
   
 </body>
   
