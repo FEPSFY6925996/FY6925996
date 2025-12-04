@@ -81,7 +81,7 @@ p.exl {
 </section>
   
 <h3 id="The Problem">The Problem</h3>  
-<p id="The Problem_InText">
+<p id="TheProblem_InText">
   <p class="ex1" 
     <pre>
     gghghggggggggggggggggggggggggggggggggggggggggggggg
@@ -91,7 +91,7 @@ p.exl {
   
 <section style="background-color:#A42EFF;">
 <h3 id="Soluction - self healing concrete">Soluction - self healing concrete</h3>
-<p id="Soluction - self healing concrete_InText"> 
+<p id="Soluctionselfhealingconcrete_InText"> 
   <p class="ex1"
     <pre>
    A solution to the issue would be concrete that self heals the early minor damage. Done correctly, self healing concrete lasts for longer and is beneficial for 3 major reasons:
@@ -115,7 +115,7 @@ It is estimated that currently in the uk £40 billion pounds a year are spent on
   
 <section style="background-color:#A42EFF;">
  <h3 id="Current Research">Current Research</h3>
-  <p id="Current Research_InText"> 
+  <p id="CurrentResearch_InText"> 
   <p class="ex1"
     <pre>
     gghghggggggggggggggggggggggggggggggggggggggggggggg
@@ -210,6 +210,8 @@ Due to the scale of the  need and the commercial value of a finding a solution, 
     // Initial load to display the time on page load
     window.onload = getLastUpdatedTime;
 </script>
+
+  
 <!-- Placeholder for total word count -->
 <p id="totalWordCount"></p>
 <hr>
@@ -228,10 +230,13 @@ Due to the scale of the  need and the commercial value of a finding a solution, 
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
+    const TheProblemCount = displayWordCount("TheProblem_InText");
+    const SoluctionselfhealingconcreteCount = displayWordCount("Soluctionselfhealingconcrete_InText");
+    const HistoryCount = displayWordCount("History_InText");
+    const CurrentResearchCount = displayWordCount("CurrentResearch_InText");
+    const SummaryCount = displayWordCount("Summary_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = TheProblemCount +  SoluctionselfhealingconcreteCount +TheProblemCount + HistoryCount + CurrentResearchCount + SummaryCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
